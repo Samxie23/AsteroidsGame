@@ -23,7 +23,12 @@ public void draw()
  for(int i = 0; i < yes.size();i++){
 		yes.get(i).show();
 		yes.get(i).move();
+		if(dist(ship.getX(),ship.getY(),yes.get(i).getX(),yes.get(i).getY()) < 10){
+		yes.remove(i);
+		
 	}
+	}
+	
 }
 public void keyPressed(){
 	if(key == 'w'){
